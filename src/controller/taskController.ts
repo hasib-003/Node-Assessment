@@ -13,7 +13,7 @@ const repository = AppDataSource.getRepository(Task);
  * @returns Response with product data and pagination metadata
  */
 export const fetchAllTasks = async (req: Request, res: Response ) => {
-    const take =  parseInt(req.query.pageSize as string || '10');; // Number of products to retrieve per page
+    const take =  parseInt(req.query.pageSize as string || '10'); // Number of products to retrieve per page
     const page = parseInt(req.query.pageNumber as string || '1'); // Current page number
     const token = req.headers['authorization'].split(' ')[1];
     const userId = getUserId(token)
