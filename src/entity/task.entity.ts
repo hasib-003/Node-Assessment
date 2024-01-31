@@ -17,5 +17,4 @@ export class Task {
     @Column()
     userId:number
 
-    // No additional methods or functionalities added in this class
 }
